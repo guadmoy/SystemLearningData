@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item android:title="New Course"
+        android:id="@+id/id_new_kyrs"
+        android:icon="@drawable/ic_new_kyrs"
+        app:showAsAction="ifRoom"
+
+        />
+</menu>

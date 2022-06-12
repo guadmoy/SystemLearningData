@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/id_recomendation"
+        android:icon="@drawable/ic_home"
+        android:orderInCategory="1"
+        android:title="Советы" />
+    <item
+        android:id="@+id/id_search_course"
+        android:icon="@drawable/ic_search"
+        android:orderInCategory="2"
+        android:title="Поиск" />
+    <item
+        android:id="@+id/id_my_favorite_course"
+        android:icon="@drawable/ic_play_circle"
+        android:orderInCategory="3"
+        android:title="Избранное" />
+    <item
+        android:id="@+id/id_my_user"
+        android:icon="@drawable/ic_user"
+        android:orderInCategory="4"
+        android:title="Профиль" />
+</menu>

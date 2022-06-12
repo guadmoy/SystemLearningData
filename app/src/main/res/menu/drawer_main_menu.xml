@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="@string/kurs">
+        <menu>
+            <item android:title="@string/kurs_my_kurss"
+                android:id="@+id/my_kurs"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/acc">
+        <menu>
+            <item android:title="Мой аккаунт"
+                android:id="@+id/my_profile"/>
+        </menu>
+    </item>
+
+</menu>

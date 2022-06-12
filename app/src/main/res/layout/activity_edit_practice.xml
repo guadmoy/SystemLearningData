@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/three_color"
+    android:orientation="vertical"
+    tools:context=".act.EditPracticeActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="@color/three_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ibBacks"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:backgroundTint="@color/three_color"
+                android:onClick="onClickBack"
+                android:rotation="180"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/ic_vector" />
+
+            <TextView
+                android:id="@+id/tvTitleCreateModule"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Создать практику"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardPractic1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvTitlePractic1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вопрос"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edPracticQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Введите вопрос"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp" />
+
+            <RadioGroup
+                android:id="@+id/typeQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/answerP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Прямой ответ на вопрос" />
+
+                <RadioButton
+                    android:id="@+id/changeAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Выбор из ответов" />
+
+                <RadioButton
+                    android:id="@+id/pasteAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Вставить пропущенное слово" />
+
+                <RadioButton
+                    android:id="@+id/taskEdecation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Задание на самостоятельное обучение" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/edPracticA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Введите ответ(если нужно выбрать среди нескольких ответов, то введите слова через запятую(первое слово будет ответом))"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btSavePractice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/main_color"
+        android:onClick="onClickPublish"
+        android:text="Сохранить"
+        android:textColor="@color/white" />
+
+</LinearLayout>

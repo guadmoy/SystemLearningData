@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category">
+        <item>Разработка</item>
+        <item>Бизнес</item>
+        <item>Финансы и бухгалтерский учет</item>
+        <item>ИТ и ПО</item>
+        <item>Офисное программное обеспечение</item>
+        <item>Личностный рост</item>
+        <item>Дизайн</item>
+        <item>Маркетинг</item>
+        <item>Стиль жизни</item>
+        <item>Фотография и видео</item>
+        <item>Здоровье и фитнес</item>
+        <item>Музыка</item>
+        <item>Учебные и академические дисциплины</item>
+    </string-array>
+
+    <string-array name="pod_category_development">
+        <item>Веб-разработка</item>
+        <item>Обработка и анализ данных</item>
+        <item>Языки програмирования</item>
+        <item>Разработка мобильных приложений</item>
+        <item>Разработка игр</item>
+        <item>Проектирование и разработка баз данных</item>
+        <item>Тестирование программного обеспечения</item>
+        <item>Инженерия разработки ПО</item>
+        <item>Разработка без кода</item>
+        <item>Иструменты для разработки программного обеспечения</item>
+    </string-array>
+</resources>

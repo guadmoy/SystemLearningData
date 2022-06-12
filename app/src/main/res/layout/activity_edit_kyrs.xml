@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/place_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+    android:backgroundTint="@color/three_color"
+    tools:context=".act.EditKyrsAct">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/svMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/background_color"
+                    app:cardCornerRadius="10dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/imageButton4"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="10dp"
+                            android:backgroundTint="@color/white"
+                            android:onClick="onClickBack"
+                            android:rotation="180"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvEditName"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tvEditName"
+                            app:srcCompat="@drawable/ic_vector" />
+
+                        <TextView
+                            android:id="@+id/tvEditName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/name_edit_main"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/vpImages"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/imageButton4"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="3dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/three_color"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toTopOf="@+id/vpImages"
+                            app:layout_constraintEnd_toEndOf="@+id/tvEditName"
+                            app:layout_constraintStart_toStartOf="@+id/tvEditName"
+                            app:layout_constraintTop_toBottomOf="@+id/tvEditName" />
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/vpImages"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_margin="5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/ibGetImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:backgroundTint="@color/white"
+                            android:contentDescription="@string/kurs"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            android:onClick="onClickGetImage"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/vpImages"
+                            app:srcCompat="@drawable/ic_add_galery_image"
+                            tools:ignore="SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TabHost
+                    android:id="@+id/tabHost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/tab1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cardGroup2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/background_color"
+                                    android:visibility="visible"
+                                    app:cardCornerRadius="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/tvName"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:text="@string/name_course"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <EditText
+                                            android:id="@+id/edName"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:autofillHints=""
+                                            android:ems="10"
+                                            android:hint="@string/name_course_hint"
+                                            android:inputType="textAutoCorrect|textPersonName"
+                                            android:minHeight="48dp"
+                                            android:textSize="15sp" />
+
+                                        <LinearLayout
+                                            android:id="@+id/divide7"
+                                            android:layout_width="80dp"
+                                            android:layout_height="2dp"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@color/three_color"
+                                            android:orientation="horizontal">
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/tvCatSelect"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="10dp"
+                                            android:text="@string/category"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/tvCat"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:minHeight="48dp"
+                                            android:onClick="onClickSelectCategory"
+                                            android:padding="10dp"
+                                            android:text="@string/select_category"
+                                            android:textSize="15sp" />
+
+                                        <LinearLayout
+                                            android:id="@+id/divide4"
+                                            android:layout_width="80dp"
+                                            android:layout_height="2dp"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@color/three_color"
+                                            android:orientation="horizontal" />
+
+                                        <TextView
+                                            android:id="@+id/tvDescription"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:text="Краткое описание курса"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <EditText
+                                            android:id="@+id/edDescription"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:autofillHints=""
+                                            android:ems="10"
+                                            android:hint="Укажите информацию о курсе"
+                                            android:inputType="textMultiLine"
+                                            android:minHeight="48dp"
+                                            android:textSize="15sp" />
+
+                                        <LinearLayout
+                                            android:id="@+id/divide10"
+                                            android:layout_width="80dp"
+                                            android:layout_height="2dp"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@color/three_color"
+                                            android:orientation="horizontal">
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/tvAboutCourse"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:text="О курсе"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <EditText
+                                            android:id="@+id/edAboutCourse"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_weight="1"
+                                            android:autofillHints=""
+                                            android:ems="10"
+                                            android:hint="Подробная информация о курсе"
+                                            android:inputType="textMultiLine"
+                                            android:minHeight="48dp"
+                                            android:textSize="15sp" />
+
+                                        <LinearLayout
+                                            android:id="@+id/divide5"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@color/three_color"
+                                            android:orientation="horizontal">
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/tvVideo"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:text="Ссылка на ознакомительное видео"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <EditText
+                                            android:id="@+id/edUriVideo"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_weight="1"
+                                            android:autofillHints=""
+                                            android:ems="10"
+                                            android:hint="Укажите код с ссылки с Ютуб на видео"
+                                            android:inputType="textUri"
+                                            android:minHeight="48dp"
+                                            android:textSize="15sp" />
+
+                                        <LinearLayout
+                                            android:id="@+id/divide55"
+                                            android:layout_width="80dp"
+                                            android:layout_height="2dp"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@color/three_color"
+                                            android:orientation="horizontal">
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/tvRequest"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:text="@string/requirements"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <EditText
+                                            android:id="@+id/edRequest"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:autofillHints=""
+                                            android:ems="10"
+                                            android:hint="@string/requirements_hint"
+                                            android:inputType="textMultiLine"
+                                            android:minHeight="48dp"
+                                            android:textSize="15sp" />
+
+                                        <LinearLayout
+                                            android:id="@+id/divide11"
+                                            android:layout_width="80dp"
+                                            android:layout_height="2dp"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@color/three_color"
+                                            android:orientation="horizontal">
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/tvAudit"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:text="@string/auditorium"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <EditText
+                                            android:id="@+id/edAudit"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:autofillHints=""
+                                            android:ems="10"
+                                            android:hint="@string/auditorium_hint"
+                                            android:inputType="textMultiLine"
+                                            android:minHeight="48dp"
+                                            android:textSize="15sp" />
+
+                                        <LinearLayout
+                                            android:id="@+id/divide6"
+                                            android:layout_width="80dp"
+                                            android:layout_height="2dp"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@color/three_color"
+                                            android:orientation="horizontal">
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/tvTime"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:text="@string/time_course"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <EditText
+                                            android:id="@+id/edTime"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:autofillHints=""
+                                            android:ems="10"
+                                            android:hint="@string/time_hint"
+                                            android:inputType="time"
+                                            android:minHeight="48dp"
+                                            android:textSize="15sp" />
+
+
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cardGroup1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/background_color"
+                                    android:visibility="visible"
+                                    app:cardCornerRadius="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/tvCitySelect"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="10dp"
+                                            android:text="@string/city"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/tvCity"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:minHeight="48dp"
+                                            android:onClick="onClickSelectCity"
+                                            android:padding="10dp"
+                                            android:text="@string/select_city"
+                                            android:textSize="15sp" />
+
+                                        <LinearLayout
+                                            android:id="@+id/divide1"
+                                            android:layout_width="80dp"
+                                            android:layout_height="2dp"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@color/three_color"
+                                            android:orientation="horizontal" />
+
+                                        <TextView
+                                            android:id="@+id/tvUneverSelect"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:text="@string/unever"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/tvUnever"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:minHeight="48dp"
+                                            android:onClick="onClickSelectUnever"
+                                            android:padding="10dp"
+                                            android:text="@string/select_unever"
+                                            android:textSize="15sp" />
+
+                                        <LinearLayout
+                                            android:id="@+id/divide2"
+                                            android:layout_width="80dp"
+                                            android:layout_height="2dp"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@color/three_color"
+                                            android:orientation="horizontal" />
+
+                                        <TextView
+                                            android:id="@+id/tvLangue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:text="@string/langue"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <EditText
+                                            android:id="@+id/edLangue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:autofillHints=""
+                                            android:ems="10"
+                                            android:hint="@string/langue_hint"
+                                            android:inputType="textPersonName"
+                                            android:minHeight="48dp"
+                                            android:textSize="15sp" />
+
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cardGroup3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/background_color"
+                                    android:visibility="visible"
+                                    app:cardCornerRadius="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/tvCertificate"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:text="@string/certificate"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <Switch
+                                            android:id="@+id/switchCertiwicat"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginEnd="50dp"
+                                            android:minHeight="48dp"
+                                            android:text="Выдача сертификата"
+                                            android:textSize="18sp" />
+
+                                        <LinearLayout
+                                            android:id="@+id/divide9"
+                                            android:layout_width="80dp"
+                                            android:layout_height="2dp"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@color/three_color"
+                                            android:orientation="horizontal" />
+
+                                        <TextView
+                                            android:id="@+id/tvCertificate3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:text="Тип курса:"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <Switch
+                                            android:id="@+id/switchTypeCourse"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginEnd="50dp"
+                                            android:minHeight="48dp"
+                                            android:text="Только видеоматериал"
+                                            android:textSize="18sp" />
+
+                                        <LinearLayout
+                                            android:id="@+id/divide12"
+                                            android:layout_width="80dp"
+                                            android:layout_height="2dp"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@color/three_color"
+                                            android:orientation="horizontal" />
+
+                                        <TextView
+                                            android:id="@+id/tvPrice"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:text="@string/price"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <EditText
+                                            android:id="@+id/edPrice"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:autofillHints=""
+                                            android:ems="10"
+                                            android:hint="@string/select_price"
+                                            android:inputType="number"
+                                            android:minHeight="48dp"
+                                            android:textSize="15sp" />
+
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+
+                                <Button
+                                    android:id="@+id/btSend"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="40dp"
+                                    android:backgroundTint="@color/main_color"
+                                    android:onClick="onClickPublish"
+                                    android:text="@string/send" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cardButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp"
+                                    app:cardBackgroundColor="@color/three_color"
+                                    app:cardCornerRadius="5dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="right"
+                                        android:orientation="horizontal">
+
+                                        <Button
+                                            android:id="@+id/btLectureAdd"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginEnd="10dp"
+                                            android:backgroundTint="@color/main_color"
+                                            android:onClick="onClickAddModule"
+                                            android:text="Добавить лекцию" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recModule"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tab3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cardButton1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:cardBackgroundColor="@color/three_color"
+                                    app:cardCornerRadius="5dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="right"
+                                        android:orientation="horizontal">
+
+                                        <Button
+                                            android:id="@+id/btPracticeAdd"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginEnd="10dp"
+                                            android:backgroundTint="@color/main_color"
+                                            android:onClick="onClickAddPractice"
+                                            android:text="Добавить практику" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recModulePractice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp" />
+
+                            </LinearLayout>
+
+                        </FrameLayout>
+                    </LinearLayout>
+                </TabHost>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">SLD</string>
+
+    <!--Блок меню (Menu Drawer Strings) -->
+    <string name="kurs">Курсы</string>
+    <string name="kurs_my_kurss">Мои созданные курсы</string>
+
+    <string name="acc">Аккаунт</string>
+    <string name="acc_my_up">Регистрация</string>
+    <string name="acc_my_in">Вход</string>
+    <string name="acc_my_out">Выход</string>
+
+    <!--Окно Регистрации (SingDialogs Strings) -->
+    <string name="sing_up_action">Зарегистрироваться</string>
+    <string name="sing_up_error">Не удалось зарегистрироваться</string>
+    <string name="sing_in_action">Войти</string>
+    <string name="sing_in_error">Не удалось войти</string>
+    <string name="sing_in_suc">Вы успешно вошли</string>
+    <string name="forget_password">Забыли пароль</string>
+    <string name="sing_send_suc">Письмо успешно отправлено на почту</string>
+    <string name="sing_send_error">Не удалось отправить письмо на почту</string>
+    <string name="sing_send_reset_warning">Укажите Email для восстановления пароля!</string>
+
+
+    <!--Окно Регистрации (NavHeaderMain Strings) -->
+    <string name="not_reg">Войдите или зарегистрируйтесь</string>
+
+    <!--Окно Редактирования курса () -->
+    <string name="name_edit_main">Создать курс</string>
+    <string name="select_city">*Выберите Город</string>
+    <string name="city">Город:</string>
+    <string name="select_unever">*Выберите Университет</string>
+    <string name="unever">Университет:</string>
+    <string name="langue">Язык:</string>
+    <string name="langue_hint">Укажите язык курса</string>
+    <string name="select_category">*Выберите Категорию</string>
+    <string name="category">Категория:</string>
+    <string name="select_price">*Укажите цену</string>
+    <string name="price">Цена:</string>
+    <string name="select_description">*Укажите описание</string>
+    <string name="description">Описание:</string>
+    <string name="requirements_hint">*Укажите требования</string>
+    <string name="requirements">Требования:</string>
+    <string name="auditorium_hint">*Укажите целевую аудиторию</string>
+    <string name="auditorium">Целевая аудитория:</string>
+    <string name="time_hint">*Укажите время прохождения курса</string>
+    <string name="time_course">Время прохождения курса:</string>
+    <string name="teacher_hint">*Укажите имя и фамилию преподователя</string>
+    <string name="teacher">Преподователь:</string>
+    <string name="certificate_hint">*Укажите наличие сертификата</string>
+    <string name="certificate">Сертификат:</string>
+    <string name="name_course_hint">*Укажите название курса</string>
+    <string name="name_course">Название:</string>
+    <string name="send">Опубликовать</string>
+
+
+    <string name="name_edit_block1">Блок первый</string>
+    <string name="not_teacher">Вы не являетесь учителем</string>
+
+    <!--Нижний навигационный бар () -->
+    <string name="favorite">Избранное</string>
+    <string name="myStudy">Мое Обучение</string>
+    <string name="recomended">Рекомедации</string>
+
+
+    <string name="youtubeId"></string>
+
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "825266917855",
+    "firebase_url": "https://lmsdata-d7443-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "lmsdata-d7443",
+    "storage_bucket": "lmsdata-d7443.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825266917855:android:504ebe97a6c41f2b34f46a",
+        "android_client_info": {
+          "package_name": "com.guadmoy.systemlearning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "825266917855-qhbjgane3mkv24nctoeq42jeqkag1ged.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.guadmoy.systemlearning",
+            "certificate_hash": "05565464bc86b2b267687304ab8b5e65a25fdd4d"
+          }
+        },
+        {
+          "client_id": "825266917855-ri8gof3v093ack7eli2ijsamnasq7cqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMsQfY6mw9wIKC4OEmbbBpKb6ZKpiviL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "825266917855-ri8gof3v093ack7eli2ijsamnasq7cqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
